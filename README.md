@@ -1,11 +1,10 @@
-=====
 Request Logger
 =====
 
 Request Logger is a simple Django middleware to log all http requests to your django application. It logs
 request data, response, HTTP methods, and requesting IP.
 
-This model only runs with PostgreSQL as the database, since it stores request and response as JSON.
+This model only runs with PostgreSQL as the database for now.
 
 Quick start
 -----------
