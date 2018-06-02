@@ -1,26 +1,34 @@
 Request Logger
 =====
 
-Request Logger is a simple Django middleware to log all http requests to your django application. It logs
+This is a simple Django middleware to log all http requests to your django application. It logs
 request data, response, HTTP methods, and requesting IP.
 
 This model only runs with PostgreSQL as the database for now.
 
-Quick start
------------
+# Requirements
 
-1. Add "logger" to your INSTALLED_APPS setting like this::
+* Python (3.4, 3.5, 3.6)
+* Django (1.11, 2.0)
 
-    INSTALLED_APPS = [
+# Installation
+
+Install using `pip`...
+
+    pip install django-request-logger
+
+Add `'logger'` to your `INSTALLED_APPS` setting.
+
+    INSTALLED_APPS = (
         ...
         'logger',
-    ]
+    )
 
-2. Add requestlogger to the MIDDLEWARES in your settings:
+Add `'logger.middleware'` to the `'MIDDLEWARES'` in your settings:
 
     MIDDLEWARE = [
     ...
     'logger.middleware',
     ]
 
-3. Run `python manage.py migrate` to create the RequestLogger models.
+Run `python manage.py migrate` to create the `'RequestLog'` models.
